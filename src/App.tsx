@@ -1,10 +1,10 @@
 import React from 'react';
-import EmailEditor from './components/editor/EmailEditor';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <EmailEditor />
+    <div className="App">
+      <h1>Bem-vindo ao Personex1</h1>
+      <p>Este é o seu aplicativo React com TypeScript e Vite.</p>
     </div>
   );
 }
