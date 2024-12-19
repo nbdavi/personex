@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -14,12 +15,14 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
-            <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
-            <a href="#testimonials" className="text-gray-600 hover:text-gray-900">Testimonials</a>
-            <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
-              Get Started
-            </button>
+            <Link to="/features" className="text-gray-600 hover:text-gray-900">Features</Link>
+            <Link to="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link>
+            <Link to="/testimonials" className="text-gray-600 hover:text-gray-900">Testimonials</Link>
+            <Link to="/login">
+              <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                Get Started
+              </button>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -33,12 +36,14 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#features" className="block px-3 py-2 text-gray-600">Features</a>
-            <a href="#pricing" className="block px-3 py-2 text-gray-600">Pricing</a>
-            <a href="#testimonials" className="block px-3 py-2 text-gray-600">Testimonials</a>
-            <button className="w-full text-left px-3 py-2 bg-indigo-600 text-white rounded-md">
-              Get Started
-            </button>
+            <Link to="/features" className="block px-3 py-2 text-gray-600">Features</Link>
+            <Link to="/pricing" className="block px-3 py-2 text-gray-600">Pricing</Link>
+            <Link to="/testimonials" className="block px-3 py-2 text-gray-600">Testimonials</Link>
+            <Link to="/login">
+              <button className="w-full text-left px-3 py-2 bg-indigo-600 text-white rounded-md">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       )}
