@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'], // Define os arquivos onde Tailwind será aplicado
   theme: {
-    extend: {},
+    extend: {}, // Permite estender a configuração padrão de Tailwind
   },
-  plugins: [],
+  darkMode: 'class', // Ativa o suporte ao modo escuro baseado na classe "dark"
+  plugins: [], // Adicione plugins aqui, se necessário
 };
